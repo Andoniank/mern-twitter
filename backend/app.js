@@ -8,8 +8,9 @@ const csurf = require('csurf');
 const { isProduction } = require('./config/keys');
 
 require('./models/User');
-require('./config/passport'); // <-- ADD THIS LINE
-const passport = require('passport'); // <-- ADD THIS LINE
+require('./models/Tweet');
+require('./config/passport'); 
+const passport = require('passport'); 
 
 const usersRouter = require('./routes/api/users'); // update the import file path
 const tweetsRouter = require('./routes/api/tweets');
